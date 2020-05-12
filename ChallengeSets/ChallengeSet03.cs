@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -7,17 +8,40 @@ namespace ChallengeSets
     {
         public bool ArrayContainsAFalse(bool[] vals)
         {
-            throw new NotImplementedException();
+            bool val = false;
+            if(val == false)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+  
         }
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            
+            if(numbers == null)
+            {
+                return false;
+            }
+            return (numbers.Sum() % 2 != 0);
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
         {
-            throw new NotImplementedException();
+            string s = "some-password";
+            int upcaseCount = 0;
+            int numbersCount = 0;
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (char.IsUpper(s[i])) upcaseCount++;
+                if (char.IsDigit(s[i])) numbersCount++;
+            }
         }
 
         public char GetFirstLetterOfString(string val)
@@ -33,7 +57,7 @@ namespace ChallengeSets
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            return dividend % divisor;
         }
 
         public int LastMinusFirst(int[] nums)
@@ -42,7 +66,17 @@ namespace ChallengeSets
         }
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            var numbers = new List<int>();
+
+            for (int i = 0; i < 100; i++)
+            {
+                if (i % 2 != 0)
+        
+            {
+                numbers.Add(i);
+            }
+        }
+            return numbers.ToArray();
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
